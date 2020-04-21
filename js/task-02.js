@@ -1,14 +1,18 @@
+"use strict";
+
 const inventory = {
   items: ["Knife", "Gas mask"],
   add(itemName) {
     console.log(`Adding ${itemName} to inventory`);
-
-    inventory.items.push(itemName);
+    const fnAdd = () => {
+      this.items.push(itemName);
+    };
   },
   remove(itemName) {
     console.log(`Removing ${itemName} from inventory`);
-
-    inventory.items = inventory.items.filter((item) => item !== itemName);
+    const fnRemove = () => {
+      this.items = this.items.filter((item) => item !== itemName);
+    };
   },
 };
 
